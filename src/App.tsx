@@ -16,13 +16,13 @@ function App() {
         <div className="fixed inset-0 flex justify-center sm:px-8">
           <div className="flex w-full max-w-7xl lg:px-8">
             <Routes>
-              <Route exact path="/" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/product/:id" element={<ProductDetails />} />
             </Routes>
-          </div>{" "}
+          </div>
         </div>
       </ProductProvider>
     </>

@@ -3,12 +3,14 @@ import ProductCard from "./ProductCard";
 import {BrowserRouter} from "react-router-dom";
 
 
-  test("renders the ProductCard component", () => {
-    render(
-        <BrowserRouter>
-          <ProductCard id={1} product={{name: 'Some Name', description: 'Some Description' }} />
-        </BrowserRouter>
+describe('ProductCard', () => {
+    test("renders the ProductCard component",() => {
+        render(
+            <BrowserRouter>
+                <ProductCard id={1} product={{name: 'Some Name', description: 'Some Description'}}/>
+            </BrowserRouter>
         );
 
-    expect(screen.getByRole('heading')).toHaveTextContent('Some Name');
-  });
+        expect(screen.getByRole('heading')).toHaveTextContent('Some Name');
+    })
+});

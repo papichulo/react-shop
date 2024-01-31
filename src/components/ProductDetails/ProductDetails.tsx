@@ -8,7 +8,9 @@ const ProductDetails = () => {
   const { addToCart } = useContext(ProductContext);
 
   const handleAddToCart = () => {
-    addToCart(product);
+      if (addToCart) {
+          addToCart(product);
+      }
   };
   return (
     <div>

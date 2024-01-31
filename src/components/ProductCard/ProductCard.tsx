@@ -1,6 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import {ProductInfo} from "../../models/models.ts";
 
-const ProductCard = ({ id, product }) => {
+interface ProductCardProps {
+  id: number,
+  product: ProductInfo
+}
+const ProductCard = (props: ProductCardProps) => {
+  const id = props.id;
+  const product = props.product;
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(`/product/${id}`, { state: { product: product } });
