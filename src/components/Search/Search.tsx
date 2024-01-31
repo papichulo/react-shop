@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ProductContext } from "../../context/ProductProvider";
 
 const Search = () => {
-  const searchVal = useRef<HTMLInputElement>();
+  const searchVal = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
   const { searchProducts } = useContext(ProductContext);
 
